@@ -11,3 +11,33 @@ justify-content: center;
 align-items: center;
 }
 
+
+
+//Buttonstyle
+
+button {
+    box-shadow : 3px 3px 3px rgba(0,0,0,0.3);
+    height : 25px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+
+//Buttoncontainer
+.buttoncontainer {
+
+border: solid 1px;
+height: 100px;
+
+}
+
+
+//Überschriftstyle
+
+h1 {
+
+font-style: sans-serif;
+
+}
