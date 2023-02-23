@@ -1,11 +1,9 @@
 
-
 // Express Server 
-
 
 const express = require ("express");
 const app = express();
-const db = require ('\Database\db.js');
+//const db = require ('../database/db.js');
 const HTTP_PORT = 3000;
 
 
