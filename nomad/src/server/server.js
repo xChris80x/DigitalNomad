@@ -3,8 +3,8 @@
 
 const express = require ("express");
 const app = express();
-const db = require ('../database/db');
-const HTTP_PORT = 3000;
+const db = require ('../database/db'); 
+const HTTP_PORT = 3000; 
 
 
 app.listen(HTTP_PORT, () => {
@@ -12,8 +12,7 @@ console.log(`Server ist running on Port ${HTTP_PORT} `);
 } );
 
 
-
-//Express Enpoints/Methoden 
+//Express Enpoints/Methoden zum testen
 
 app.get("/api", (req, res) => {
 res.json({message : "Läuft"});

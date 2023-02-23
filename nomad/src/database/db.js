@@ -1,4 +1,4 @@
-//Datenbank mit Sqlite3
+//Datenbank erstellen mit Sqlite3
 
 const sqlite3 = require ("sqlite3");
 
@@ -12,7 +12,7 @@ if(err) {
 
 console.log("connected with Sqlite Database");
 
-
+//Erstellung einer Tabelle
 db.run (
     `CREATE TABLE data (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -29,7 +29,7 @@ db.run (
     }
      
     var insert = "INSERT INTO data (name, description, created, updated) VALUES (?,?,?,?) ";
-    
+  // Testdatensatz
   db.run(insert,  [
     "Orte anlegen",
     "Dies ist ein schöner Ort",
@@ -41,5 +41,5 @@ db.run (
 }
 );
 });
-
+//Datenbank exportieren 
 module.exports = db;
