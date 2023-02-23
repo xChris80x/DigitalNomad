@@ -19,6 +19,17 @@ export class MapComponent implements OnInit {
 
     L.marker([51.146089, 7.590706]).addTo(map)
       .bindPopup('I am here!');
+
+
+    
+      var popup1 = L.popup()
+      .setLatLng([51.146089, 7.590706])
+      .setContent('<p>Hallo<br />Ich bin hier.</p>')
+      .addTo(map);
+
   }
+
+
 }
+
 
