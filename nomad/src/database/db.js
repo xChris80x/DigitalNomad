@@ -2,7 +2,7 @@
 
 const sqlite3 = require ("sqlite3");
 
-let db = new sqlite3.Database(data.db, (err) => {
+let db = new sqlite3.Database("data.db", (err) => {
 
 if(err) {
 
@@ -30,7 +30,7 @@ db.run (
      
     var insert = "INSERT INTO data (name, description, created, updated) VALUES (?,?,?,?) ";
     
-  db.run(instert,  [
+  db.run(insert,  [
     "Orte anlegen",
     "Dies ist ein schöner Ort",
     Date.now(),

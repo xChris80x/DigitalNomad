@@ -3,7 +3,7 @@
 
 const express = require ("express");
 const app = express();
-//const db = require ('../database/db.js');
+const db = require ('../database/db');
 const HTTP_PORT = 3000;
 
 
