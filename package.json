@@ -1,5 +1,10 @@
 {
   "dependencies": {
-    "leaflet": "^1.9.3"
+    "@mapbox/mapbox-gl-geocoder": "^5.0.1",
+    "leaflet": "^1.9.3",
+    "mapbox-geocoding": "^0.1.5"
+  },
+  "devDependencies": {
+    "@types/ckeditor__ckeditor5-build-classic": "^29.0.1"
   }
 }

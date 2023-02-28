@@ -1,20 +1,49 @@
-
-//Buttons Container
-<div class="buttoncontainer">
-   
+<!-- Buttoncontainer -->
+<div class="buttoncontainer">   
 <button id="">Ort hinzufügen</button>
 <button id="">Ort löschen</button>
 <button id="">Ort ändern</button>
 <button id="">Orte anzeigen</button>
-
-
 </div>
 
 
-//Container mit der app-map
+<!-- Suchfeld-->
+<label for="location">Ort:</label>
+<input id="location" type="text" placeholder="Ort eingeben">
+<button id="search-btn">Suchen</button>
+
+
+<script>
+
+    const searchBtn = document.getElementById('search-btn');
+    const locationInput = document.getElementById('location');
+          
+          
+          
+          searchBtn.addEventListener('click', () => {
+              const location = locationInput.value;
+              const geocoderUrl = https://api.mapbox.com/geocoding/v5/mapbox.places/hamburg.json?proximity=ip&access_token=pk.eyJ1IjoiY2hyaXNnNDAiLCJhIjoiY2xlbjk4cGwwMTdwZzNubjhvamdiN2JzbCJ9.BtJ2age8-ZGJlCHOgMMidA
+          
+              fetch(geocoderUrl)
+                .then(response => response.json())
+                .then(data => {
+                  const features = data.features;
+                  const firstFeature = features[0];
+                  const [longitude, latitude] = firstFeature.center;
+                  const marker = L.marker([latitude, longitude]).addTo(map);
+                  map.setView([latitude, longitude], 13);
+                })
+                .catch(error => {
+                  console.error('Fehler beim Geocodieren:', error);
+                });
+            });
+</script>
+
+
+
+<!-- Mapcontainer -->
 <div class="cards">
     
 <app-map></app-map>
 </div>
-
 
