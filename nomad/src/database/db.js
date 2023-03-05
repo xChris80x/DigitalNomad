@@ -14,12 +14,13 @@ console.log("connected with Sqlite Database");
 
 //Erstellung einer Tabelle
 db.run (
-    `CREATE TABLE data (
+    `CREATE TABLE places (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT NOT NULL,
-        decription TEXT,
-        created INTEGER,
-        updated INTEGER
+        description TEXT,
+        latitude REAL,
+        longitude REAL
+        
     )`,
     (err) => {
 
@@ -28,13 +29,13 @@ db.run (
         return;
     }
      
-    var insert = "INSERT INTO data (name, description, created, updated) VALUES (?,?,?,?) ";
+    var insert = "INSERT INTO places (id, name, latitude, longitude) VALUES (?,?,?,?) ";
   // Testdatensatz
   db.run(insert,  [
-    "Orte anlegen",
-    "Dies ist ein schöner Ort",
-    Date.now(),
-    Date.now(),
+    "12",
+    "Hamburg",
+    53.551086,
+    9.993682,
 
   ]
   );

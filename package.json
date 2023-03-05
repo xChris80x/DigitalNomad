@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@mapbox/mapbox-gl-geocoder": "^5.0.1",
+    "body-parser": "^1.20.2",
     "leaflet": "^1.9.3",
     "mapbox-geocoding": "^0.1.5"
   },
