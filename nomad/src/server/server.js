@@ -31,7 +31,20 @@ app.get('/api/orte', (req, res) => {
 
 // POST-Endpoint to add a new place
 
+// Eine asynchrone Route-Handler-Funktion erstellen
+app.get('/places', async (req, res) => {
+  try {
+    // Eine Datenbankabfrage ausführen und auf das Ergebnis warten
+    const rows = await db.all('SELECT * FROM placed');
 
+    // Das Ergebnis an den Client senden
+    res.json(rows);
+  } catch (err) {
+    // Fehlerbehandlung
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
+});
 
 
 app.post('/api/ort', (req, res) => {
